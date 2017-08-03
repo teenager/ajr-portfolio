@@ -1,0 +1,432 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom styles
+	 Designed by Aaron James Rodgers, July 2016
+	 Http://aaronjamesrodgers.com
+*/
+
+html,body { height: 100%; }
+html { font-size: 62.5%; } /* 10px */
+
+body {
+	background-color: #fff;
+	color: #4a4a4a;
+	font-family: "aktiv-grotesk",sans-serif;
+	font-size: 2rem; /* 20px */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Text & link styles */
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.53846;
+	margin-bottom: 2rem;
+}
+
+h1 { font-size: 2rem; } /* 20px */
+h2 { font-size: 2rem; } /* 20px */
+
+p,
+ul li {
+	line-height: 1.53846;
+	margin-bottom: 2rem; /* 20px */
+}
+
+strong { font-weight: 700; }
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+	color: #4a4a4a;
+	border-bottom: 1px solid #DC6B3D;
+}
+
+a:hover {
+	border-bottom-color: #DC6B3D;
+	color: #DC6B3D;
+}
+
+/* Portfolio tile link styles */
+a.portfolio-tile {
+	margin: auto;
+	order: 1;
+	flex: 1;
+	display: block;
+	border: none;
+}
+
+a.portfolio-tile:hover img {
+	transition: all ease 0.25s;
+	opacity: 0.75;
+}
+
+a.portfolio-tile figcaption {
+	border-bottom: 1px solid #DC6B3D;
+	display: inline-block;
+	line-height: 1.53846;
+}
+
+a.portfolio-tile.songkick,
+a.portfolio-tile.songkick img {
+	width: 450px;
+}
+
+a.portfolio-tile.forfarfive,
+a.portfolio-tile.forfarfive img {
+	width: 340px;
+}
+
+a.portfolio-tile.photography,
+a.portfolio-tile.photography img,
+a.portfolio-tile.vzaar,
+a.portfolio-tile.vzaar img {
+	width: 380px;
+}
+
+a.portfolio-tile.capital-canaries,
+a.portfolio-tile.capital-canaries img {
+	width: 450px;
+}
+
+
+
+
+/* CSS Flex layout */
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: auto;
+}
+
+article {
+	margin: auto;
+	order: 1;
+	flex: 1;
+}
+
+article + figure {
+	flex: 1;
+	order: 2;
+}
+
+figure {
+	flex: 1;
+}
+
+figcaption {
+	margin: 0.4em 0;
+}
+
+
+
+
+/* Specific section styles */
+section.stretch { 
+	width: 100%; 
+}
+
+section.intro {
+	height: 100%;
+	background-color: #904242;
+	color: #fff;
+	animation: colorchange 120s infinite;
+}
+
+section.intro article,
+section.about-me article,
+section.footer article {
+	margin: 0 10%;
+}
+
+section.intro article {
+	margin-right: 40%;
+}
+
+section.portfolio {
+	padding: 5em 0;
+}
+
+section.portfolio article,
+section.portfolio figure {
+	text-align: center;
+}
+
+section.about-me {
+	background: #f4f4f4;
+	padding: 5em 0;
+	align-items: flex-start;
+}
+
+section.footer {
+	background: url(../images/ajr-hero.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+}
+
+/* Animation: colorchange */
+@keyframes colorchange {
+  0%   { background-color: #904242; }
+  25%  { background-color: #434290; }
+  50%  { background-color: #427e90; }
+  75%  { background-color: #dc6b3d; }
+  100% { background-color: #904242; }
+}
+
+
+
+
+
+.footer p {
+	color: #fff;
+	position: absolute;
+	bottom: 30px;
+	font-size: 1.2rem; /* 12px */
+}
+
+/* Experience */
+ul.experience li {
+	margin-bottom: 2em;
+}
+
+ul.experience li:last-of-type {
+	margin-bottom: 0;
+}
+
+ul.experience li span.job-title,
+ul.experience li span.date-range {
+	display: block;
+}
+
+/* Contact styles */
+ul.contact-list li {
+	display: inline;
+}
+
+ul.contact-list li::after {
+	content: '.';
+}
+
+/* Portfolio page styles */
+section.portfolio-description {
+	height: 100vh;
+}
+
+section.portfolio-description article {
+	margin: 0 10%;
+}
+
+section.portfolio-description article h2 {
+	margin-bottom: 0;
+}
+
+section.portfolio-description article h3 {
+	font-weight: normal;
+	color: rgba(0,0,0,0.3);
+	margin: 0 0 4em 0;
+}
+
+section.portfolio-description article p {
+	column-count: 2;
+	column-gap: 60px;
+}
+
+/* Portfolio title */
+section.portfolio-title {
+	padding: 3em 0 0 0;
+	text-align: center;
+	background-color: #f4f4f4;
+	border-top: 1px solid #ccc;
+	text-align: left;
+}
+
+section.portfolio-title article {
+	margin: 0 10%;
+}
+
+section.portfolio-images {
+	padding: 2em 0 3em;
+	text-align: center;
+	background-color: #f4f4f4;
+}
+
+section figcaption {
+
+	text-align: center;
+}
+
+section.portfolio-images img {
+	margin: 0 auto;
+}
+
+/* Portfolio piece - Updated layout */
+section.portfolio-piece {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+section.portfolio-piece figcaption {
+	font-size: 0.6em;
+}
+
+
+.wrapper section:nth-of-type(even) {
+	background-color: #4A4A4A;
+	color: white;
+}
+
+.wrapper section:nth-of-type(even) a {
+	color: inherit;
+}
+
+.wrapper.forfarfive section:nth-of-type(even) {
+	background-color: #85AF4B;
+	height: 80vh;
+}
+
+section.portfolio-piece div.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width: 100%;
+	flex-wrap: wrap;
+} 
+
+section.portfolio-piece article,
+section.portfolio-piece figure {
+	margin: 0 8%;
+}
+
+section.portfolio-piece figure {
+	text-align: center;
+}
+
+/* Footer */
+section.footer-navigation {
+	background-color: #904242;
+	color: #fff;
+	animation: colorchange 120s infinite;
+	padding: 20px;
+	text-align: left;	
+}
+
+section.footer-navigation a {
+	border-bottom: none;
+}
+
+
+/* ----------------
+	 Media query - begin
+*/
+@media screen and (max-width: 750px) {
+  
+  section.intro article {
+    margin-right: 10%;
+    padding-top: 40%;
+  }
+
+  section.intro article p:last-of-type {
+  	display: none;
+  }
+
+  section {
+  	display: block;
+  }
+
+	section.portfolio {
+		padding: 0 5%;
+	}
+
+	section.portfolio figure {
+		margin: 5% 0;		
+	}
+
+  section.portfolio figure img {
+  	width: 100% !important;
+  }
+
+  a.portfolio-tile,
+  a.portfolio-tile img {
+  	width: auto !important;
+  }
+
+  /* Responsive portfolio pages */
+	section.portfolio-description {
+		height: auto;
+		padding: 5% 0;
+	}  
+
+	section.portfolio-description article p {
+		column-count: auto;
+	}
+
+	section.portfolio-images,
+	section.portfolio-title {
+		padding: 5% 0;
+	}
+
+	section.portfolio-images figure img {
+		width: 100% !important;
+		margin: 5% 0;
+	}
+
+	.wrapper.forfarfive section:nth-of-type(even) {
+		height: auto;
+	}
+
+	.forfarfive-logo {
+		width: 100%;
+	}
+
+
+}

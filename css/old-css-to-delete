@@ -1,0 +1,110 @@
+/* Grid & column structure, 1180px wide */
+
+.stretch {
+	width: 100%;
+}
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+	width: 80px;
+	padding: 30px;
+	margin-right: 20px;
+	box-sizing: border-box;
+}
+
+[class*='col-']:only-of-type,
+[class*='col-']:last-of-type,
+.col-6 + .col-6:nth-of-type(2) {
+	margin-right: 0;
+}
+
+.col-1  { width: 80px;   }
+.col-2  { width: 180px;  }
+.col-3  { width: 280px;  }
+.col-4  { width: 380px;  }
+.col-5  { width: 480px;  }
+.col-6  { width: 580px;  }
+.col-7  { width: 680px;  }
+.col-8  { width: 780px;  }
+.col-9  { width: 880px;  }
+.col-10 { width: 980px;  }
+.col-11 { width: 1080px; }
+.col-12 { width: 1180px; }
+
+[class*='col-'].border-top:before,
+.row.border-top:before {
+	content: '';
+	display: block;
+	margin-bottom: 16px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[class*='col-'].wide-margin {
+	margin-right: 120px;
+}
+
+[class*='col-'] img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Project */
+.project {
+	height: 400px;
+	margin-bottom: 20px;
+}
+
+.project .project-image {
+	height: 100%;
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.project .project-details {
+  text-align: left;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 40px 20px 20px 20px;
+  background: -webkit-linear-gradient( bottom , rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+  box-sizing: border-box;
+}
+
+.project a {
+	color: white;
+}
+
+.project a span.project-title {
+	font-size: 24px;
+}
+
+.project a span.project-title,
+.project a span.project-description {
+	display: block;
+	transition-duration: 0.2s, 0.2s;
+	transition-property: opacity, transform;
+	transition-timing-function: ease-in-out;
+}
+
+.project a:hover .project-title,
+.project a:hover .project-description {
+	opacity: 0.6;
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
